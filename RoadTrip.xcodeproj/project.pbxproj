@@ -1,0 +1,494 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04452F5021968F6F00BFEA85 /* GFBase32Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 04452F4521968F6F00BFEA85 /* GFBase32Utils.m */; };
+		04452F5121968F6F00BFEA85 /* GeoFire.m in Sources */ = {isa = PBXBuildFile; fileRef = 04452F4721968F6F00BFEA85 /* GeoFire.m */; };
+		04452F5221968F6F00BFEA85 /* GFGeoHashQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 04452F4821968F6F00BFEA85 /* GFGeoHashQuery.m */; };
+		04452F5321968F6F00BFEA85 /* GFQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 04452F4921968F6F00BFEA85 /* GFQuery.m */; };
+		04452F5421968F6F00BFEA85 /* GFGeoHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 04452F4A21968F6F00BFEA85 /* GFGeoHash.m */; };
+		048B92F8218B7E7600697AB2 /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B92F7218B7E7600697AB2 /* LocationSearchTable.swift */; };
+		049FC52C2184F2410039D762 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049FC52B2184F2410039D762 /* AppDelegate.swift */; };
+		049FC52E2184F2410039D762 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049FC52D2184F2410039D762 /* ViewController.swift */; };
+		049FC5312184F2410039D762 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 049FC52F2184F2410039D762 /* Main.storyboard */; };
+		049FC5332184F2420039D762 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049FC5322184F2420039D762 /* Assets.xcassets */; };
+		049FC5362184F2420039D762 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 049FC5342184F2420039D762 /* LaunchScreen.storyboard */; };
+		049FD69A2186331200F67A17 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049FD6992186331200F67A17 /* CoreLocation.framework */; };
+		04CA51CD2196897C00D1144D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04CA51CC2196897C00D1144D /* GoogleService-Info.plist */; };
+		1CE87ADA7E9E0E8905C8E948 /* Pods_RoadTrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8EFD00E23EF6319D90418B5 /* Pods_RoadTrip.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		043701B7219699F600D80585 /* RoadTrip-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RoadTrip-Bridging-Header.h"; sourceTree = "<group>"; };
+		04452F3F21968F6F00BFEA85 /* GeoFire-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GeoFire-Prefix.pch"; sourceTree = "<group>"; };
+		04452F4121968F6F00BFEA85 /* GFBase32Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFBase32Utils.h; sourceTree = "<group>"; };
+		04452F4221968F6F00BFEA85 /* GFGeoHashQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFGeoHashQuery.h; sourceTree = "<group>"; };
+		04452F4321968F6F00BFEA85 /* GFGeoHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFGeoHash.h; sourceTree = "<group>"; };
+		04452F4421968F6F00BFEA85 /* GFQuery+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GFQuery+Private.h"; sourceTree = "<group>"; };
+		04452F4521968F6F00BFEA85 /* GFBase32Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFBase32Utils.m; sourceTree = "<group>"; };
+		04452F4621968F6F00BFEA85 /* GeoFire+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GeoFire+Private.h"; sourceTree = "<group>"; };
+		04452F4721968F6F00BFEA85 /* GeoFire.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoFire.m; sourceTree = "<group>"; };
+		04452F4821968F6F00BFEA85 /* GFGeoHashQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFGeoHashQuery.m; sourceTree = "<group>"; };
+		04452F4921968F6F00BFEA85 /* GFQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFQuery.m; sourceTree = "<group>"; };
+		04452F4A21968F6F00BFEA85 /* GFGeoHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFGeoHash.m; sourceTree = "<group>"; };
+		04452F4C21968F6F00BFEA85 /* GFRegionQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFRegionQuery.h; sourceTree = "<group>"; };
+		04452F4D21968F6F00BFEA85 /* GeoFire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoFire.h; sourceTree = "<group>"; };
+		04452F4E21968F6F00BFEA85 /* GFQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFQuery.h; sourceTree = "<group>"; };
+		04452F4F21968F6F00BFEA85 /* GFCircleQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFCircleQuery.h; sourceTree = "<group>"; };
+		048B92F7218B7E7600697AB2 /* LocationSearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
+		049FC5282184F2410039D762 /* RoadTrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoadTrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		049FC52B2184F2410039D762 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		049FC52D2184F2410039D762 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		049FC5302184F2410039D762 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		049FC5322184F2420039D762 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		049FC5352184F2420039D762 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		049FC5372184F2420039D762 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		049FD6992186331200F67A17 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		04CA51CC2196897C00D1144D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		546550177CB3B28198DD1631 /* Pods-RoadTrip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoadTrip.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RoadTrip/Pods-RoadTrip.debug.xcconfig"; sourceTree = "<group>"; };
+		CE95BF737626226FA7FA61CF /* Pods-RoadTrip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoadTrip.release.xcconfig"; path = "Pods/Target Support Files/Pods-RoadTrip/Pods-RoadTrip.release.xcconfig"; sourceTree = "<group>"; };
+		F8EFD00E23EF6319D90418B5 /* Pods_RoadTrip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoadTrip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		049FC5252184F2410039D762 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				049FD69A2186331200F67A17 /* CoreLocation.framework in Frameworks */,
+				1CE87ADA7E9E0E8905C8E948 /* Pods_RoadTrip.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04452F3E21968F6F00BFEA85 /* GeoFire */ = {
+			isa = PBXGroup;
+			children = (
+				04452F3F21968F6F00BFEA85 /* GeoFire-Prefix.pch */,
+				04452F4021968F6F00BFEA85 /* Implementation */,
+				04452F4B21968F6F00BFEA85 /* API */,
+			);
+			path = GeoFire;
+			sourceTree = "<group>";
+		};
+		04452F4021968F6F00BFEA85 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				04452F4121968F6F00BFEA85 /* GFBase32Utils.h */,
+				04452F4221968F6F00BFEA85 /* GFGeoHashQuery.h */,
+				04452F4321968F6F00BFEA85 /* GFGeoHash.h */,
+				04452F4421968F6F00BFEA85 /* GFQuery+Private.h */,
+				04452F4521968F6F00BFEA85 /* GFBase32Utils.m */,
+				04452F4621968F6F00BFEA85 /* GeoFire+Private.h */,
+				04452F4721968F6F00BFEA85 /* GeoFire.m */,
+				04452F4821968F6F00BFEA85 /* GFGeoHashQuery.m */,
+				04452F4921968F6F00BFEA85 /* GFQuery.m */,
+				04452F4A21968F6F00BFEA85 /* GFGeoHash.m */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		04452F4B21968F6F00BFEA85 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				04452F4C21968F6F00BFEA85 /* GFRegionQuery.h */,
+				04452F4D21968F6F00BFEA85 /* GeoFire.h */,
+				04452F4E21968F6F00BFEA85 /* GFQuery.h */,
+				04452F4F21968F6F00BFEA85 /* GFCircleQuery.h */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		049FC51F2184F2410039D762 = {
+			isa = PBXGroup;
+			children = (
+				049FC52A2184F2410039D762 /* RoadTrip */,
+				049FC5292184F2410039D762 /* Products */,
+				049FD6982186331200F67A17 /* Frameworks */,
+				925C252390170C1C1BB06978 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		049FC5292184F2410039D762 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				049FC5282184F2410039D762 /* RoadTrip.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		049FC52A2184F2410039D762 /* RoadTrip */ = {
+			isa = PBXGroup;
+			children = (
+				049FC52B2184F2410039D762 /* AppDelegate.swift */,
+				049FC52D2184F2410039D762 /* ViewController.swift */,
+				048B92F7218B7E7600697AB2 /* LocationSearchTable.swift */,
+				049FC5322184F2420039D762 /* Assets.xcassets */,
+				049FC52F2184F2410039D762 /* Main.storyboard */,
+				049FC5342184F2420039D762 /* LaunchScreen.storyboard */,
+				049FC5372184F2420039D762 /* Info.plist */,
+				04CA51CC2196897C00D1144D /* GoogleService-Info.plist */,
+				043701B7219699F600D80585 /* RoadTrip-Bridging-Header.h */,
+				04452F3E21968F6F00BFEA85 /* GeoFire */,
+			);
+			path = RoadTrip;
+			sourceTree = "<group>";
+		};
+		049FD6982186331200F67A17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				049FD6992186331200F67A17 /* CoreLocation.framework */,
+				F8EFD00E23EF6319D90418B5 /* Pods_RoadTrip.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		925C252390170C1C1BB06978 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				546550177CB3B28198DD1631 /* Pods-RoadTrip.debug.xcconfig */,
+				CE95BF737626226FA7FA61CF /* Pods-RoadTrip.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		049FC5272184F2410039D762 /* RoadTrip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 049FC53A2184F2420039D762 /* Build configuration list for PBXNativeTarget "RoadTrip" */;
+			buildPhases = (
+				1E6AF43E79B8FB31CC846F8F /* [CP] Check Pods Manifest.lock */,
+				049FC5242184F2410039D762 /* Sources */,
+				049FC5252184F2410039D762 /* Frameworks */,
+				049FC5262184F2410039D762 /* Resources */,
+				6BA8D5A0EF5D49D14A218771 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RoadTrip;
+			productName = RoadTrip;
+			productReference = 049FC5282184F2410039D762 /* RoadTrip.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		049FC5202184F2410039D762 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = sarinswift;
+				TargetAttributes = {
+					049FC5272184F2410039D762 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = 049FC5232184F2410039D762 /* Build configuration list for PBXProject "RoadTrip" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 049FC51F2184F2410039D762;
+			productRefGroup = 049FC5292184F2410039D762 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				049FC5272184F2410039D762 /* RoadTrip */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		049FC5262184F2410039D762 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04CA51CD2196897C00D1144D /* GoogleService-Info.plist in Resources */,
+				049FC5362184F2420039D762 /* LaunchScreen.storyboard in Resources */,
+				049FC5332184F2420039D762 /* Assets.xcassets in Resources */,
+				049FC5312184F2410039D762 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E6AF43E79B8FB31CC846F8F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RoadTrip-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6BA8D5A0EF5D49D14A218771 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RoadTrip/Pods-RoadTrip-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RoadTrip/Pods-RoadTrip-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		049FC5242184F2410039D762 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04452F5021968F6F00BFEA85 /* GFBase32Utils.m in Sources */,
+				048B92F8218B7E7600697AB2 /* LocationSearchTable.swift in Sources */,
+				04452F5421968F6F00BFEA85 /* GFGeoHash.m in Sources */,
+				049FC52E2184F2410039D762 /* ViewController.swift in Sources */,
+				049FC52C2184F2410039D762 /* AppDelegate.swift in Sources */,
+				04452F5121968F6F00BFEA85 /* GeoFire.m in Sources */,
+				04452F5221968F6F00BFEA85 /* GFGeoHashQuery.m in Sources */,
+				04452F5321968F6F00BFEA85 /* GFQuery.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		049FC52F2184F2410039D762 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				049FC5302184F2410039D762 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		049FC5342184F2420039D762 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				049FC5352184F2420039D762 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		049FC5382184F2420039D762 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		049FC5392184F2420039D762 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		049FC53B2184F2420039D762 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 546550177CB3B28198DD1631 /* Pods-RoadTrip.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7C5XTUX6GS;
+				INFOPLIST_FILE = RoadTrip/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sarin.RoadTrip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RoadTrip/RoadTrip-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		049FC53C2184F2420039D762 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE95BF737626226FA7FA61CF /* Pods-RoadTrip.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7C5XTUX6GS;
+				INFOPLIST_FILE = RoadTrip/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sarin.RoadTrip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RoadTrip/RoadTrip-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		049FC5232184F2410039D762 /* Build configuration list for PBXProject "RoadTrip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				049FC5382184F2420039D762 /* Debug */,
+				049FC5392184F2420039D762 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		049FC53A2184F2420039D762 /* Build configuration list for PBXNativeTarget "RoadTrip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				049FC53B2184F2420039D762 /* Debug */,
+				049FC53C2184F2420039D762 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 049FC5202184F2410039D762 /* Project object */;
+}
