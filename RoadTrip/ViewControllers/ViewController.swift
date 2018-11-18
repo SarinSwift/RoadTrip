@@ -16,6 +16,8 @@ protocol HandleMapSearch {
 }
  
 class ViewController: UIViewController, CLLocationManagerDelegate {
+    
+    let locationManager = CLLocationManager()
 
     @IBOutlet weak var mapView: MKMapView!
     
@@ -55,6 +57,74 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         self.mapView.showsUserLocation = true
     }
     
+    
+    
+    
+    // ADDED CHANGES
+    
+    
+    
+    
+    func getCenterLocation(for mapView: MKMapView) -> CLLocation {
+        let latitude = mapView.centerCoordinate.latitude
+        let longitude = mapView.centerCoordinate.longitude
+        
+        return CLLocation(latitude: latitude, longitude: longitude)
+        
+    }
+    
+    func getDirections(to toLocation: CLLocationCoordinate2D) {
+        guard let fromLocation = manager.location?.coordinate else {
+            return
+        }
+        let request = createDirectionsRequest(from: fromLocation, to: toLocation)
+        let directions = MKDirections(request: request)
+        
+
+        
+        // now that we have directions with the route, now we will calculate that gives us back a response and an error
+        directions.calculate { [unowned self] (response, error) in
+            // TODO: error handling
+            guard let response = response else { return /* TODO: show response not available in alert*/ }
+            // the routes come in array of routes. So we need to iterate through all the possible routes
+            for route in response.routes {
+                self.mapView.addOverlay(route.polyline)
+                // boundingMapRect will fit the entire route into the screen
+                self.mapView.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
+            }
+        }
+    }
+    
+    // helper method to return a request
+    func createDirectionsRequest(from fromCooridinate: CLLocationCoordinate2D, to toCoordinate: CLLocationCoordinate2D) -> MKDirections.Request {
+        
+        mapView.removeOverlays(mapView.overlays)
+        
+//        let destinationCoordinate = getCenterLocation(for: mapView).coordinate
+        let startingLocation = MKPlacemark(coordinate: fromCooridinate)
+        // coordinate of the center of the map
+        let destination = MKPlacemark(coordinate: toCoordinate)
+        
+        
+        let request = MKDirections.Request()
+        // source is the starting point
+        // destination is where wwe wanna get to
+        request.source = MKMapItem(placemark: startingLocation)
+        request.destination = MKMapItem(placemark: destination)
+        request.transportType = .automobile
+        request.requestsAlternateRoutes = true
+        
+        return request
+    }
+    
+    
+    
+    //
+    
+    
+    
+    
+    
     func setupSearchBar() {
         
         // creates the search controller
@@ -83,7 +153,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
 }
 
-extension ViewController: HandleMapSearch {
+extension ViewController: HandleMapSearch, MKMapViewDelegate {
+    
     func dropPinZoomIn(placemark: MKPlacemark) {
         // cache the pin
         selectedPin = placemark
@@ -104,6 +175,16 @@ extension ViewController: HandleMapSearch {
         let region = MKCoordinateRegion(center: placemark.coordinate, span: span)
         // zooms the map to the coordinate
         mapView.setRegion(region, animated: true)
+        
+        // draw the directions
+        getDirections(to: selectedPin!.coordinate)
+    }
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let renderer = MKPolylineRenderer(overlay: overlay as! MKPolyline)
+        renderer.strokeColor = .blue
+        
+        return renderer
     }
     
     
