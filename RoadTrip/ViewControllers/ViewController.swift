@@ -57,30 +57,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         self.mapView.showsUserLocation = true
     }
     
-    
-    
-    
-    // ADDED CHANGES
-    
-    
-    
-    
-    func getCenterLocation(for mapView: MKMapView) -> CLLocation {
-        let latitude = mapView.centerCoordinate.latitude
-        let longitude = mapView.centerCoordinate.longitude
-        
-        return CLLocation(latitude: latitude, longitude: longitude)
-        
-    }
-    
+    // function called in dropPinZoomIn()
     func getDirections(to toLocation: CLLocationCoordinate2D) {
         guard let fromLocation = manager.location?.coordinate else {
             return
         }
         let request = createDirectionsRequest(from: fromLocation, to: toLocation)
         let directions = MKDirections(request: request)
-        
-
         
         // now that we have directions with the route, now we will calculate that gives us back a response and an error
         directions.calculate { [unowned self] (response, error) in
@@ -100,7 +83,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         mapView.removeOverlays(mapView.overlays)
         
-//        let destinationCoordinate = getCenterLocation(for: mapView).coordinate
         let startingLocation = MKPlacemark(coordinate: fromCooridinate)
         // coordinate of the center of the map
         let destination = MKPlacemark(coordinate: toCoordinate)
@@ -108,7 +90,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         let request = MKDirections.Request()
         // source is the starting point
-        // destination is where wwe wanna get to
+        // destination is where we wanna get to
         request.source = MKMapItem(placemark: startingLocation)
         request.destination = MKMapItem(placemark: destination)
         request.transportType = .automobile
@@ -116,13 +98,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         return request
     }
-    
-    
-    
-    //
-    
-    
-    
     
     
     func setupSearchBar() {
