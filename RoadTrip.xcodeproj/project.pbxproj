@@ -106,6 +106,24 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		047C602A21A0DF1000E517B3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				049FC52D2184F2410039D762 /* ViewController.swift */,
+				048B92F7218B7E7600697AB2 /* LocationSearchTable.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		047C602B21A0DF3A00E517B3 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				049FC52F2184F2410039D762 /* Main.storyboard */,
+				049FC5342184F2420039D762 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		049FC51F2184F2410039D762 = {
 			isa = PBXGroup;
 			children = (
@@ -128,11 +146,9 @@
 			isa = PBXGroup;
 			children = (
 				049FC52B2184F2410039D762 /* AppDelegate.swift */,
-				049FC52D2184F2410039D762 /* ViewController.swift */,
-				048B92F7218B7E7600697AB2 /* LocationSearchTable.swift */,
+				047C602A21A0DF1000E517B3 /* ViewControllers */,
+				047C602B21A0DF3A00E517B3 /* Storyboards */,
 				049FC5322184F2420039D762 /* Assets.xcassets */,
-				049FC52F2184F2410039D762 /* Main.storyboard */,
-				049FC5342184F2420039D762 /* LaunchScreen.storyboard */,
 				049FC5372184F2420039D762 /* Info.plist */,
 				04CA51CC2196897C00D1144D /* GoogleService-Info.plist */,
 				043701B7219699F600D80585 /* RoadTrip-Bridging-Header.h */,
