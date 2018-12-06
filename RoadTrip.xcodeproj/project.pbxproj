@@ -19,6 +19,7 @@
 		049FC5332184F2420039D762 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049FC5322184F2420039D762 /* Assets.xcassets */; };
 		049FC5362184F2420039D762 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 049FC5342184F2420039D762 /* LaunchScreen.storyboard */; };
 		049FD69A2186331200F67A17 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049FD6992186331200F67A17 /* CoreLocation.framework */; };
+		04B8118421B8BCBF0014DE8F /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8118321B8BCBF0014DE8F /* FriendsViewController.swift */; };
 		04CA51CD2196897C00D1144D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04CA51CC2196897C00D1144D /* GoogleService-Info.plist */; };
 		1CE87ADA7E9E0E8905C8E948 /* Pods_RoadTrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8EFD00E23EF6319D90418B5 /* Pods_RoadTrip.framework */; };
 /* End PBXBuildFile section */
@@ -49,6 +50,7 @@
 		049FC5352184F2420039D762 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		049FC5372184F2420039D762 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		049FD6992186331200F67A17 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		04B8118321B8BCBF0014DE8F /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		04CA51CC2196897C00D1144D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		546550177CB3B28198DD1631 /* Pods-RoadTrip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoadTrip.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RoadTrip/Pods-RoadTrip.debug.xcconfig"; sourceTree = "<group>"; };
 		CE95BF737626226FA7FA61CF /* Pods-RoadTrip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoadTrip.release.xcconfig"; path = "Pods/Target Support Files/Pods-RoadTrip/Pods-RoadTrip.release.xcconfig"; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			children = (
 				049FC52D2184F2410039D762 /* ViewController.swift */,
 				048B92F7218B7E7600697AB2 /* LocationSearchTable.swift */,
+				04B8118321B8BCBF0014DE8F /* FriendsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04452F5021968F6F00BFEA85 /* GFBase32Utils.m in Sources */,
+				04B8118421B8BCBF0014DE8F /* FriendsViewController.swift in Sources */,
 				048B92F8218B7E7600697AB2 /* LocationSearchTable.swift in Sources */,
 				04452F5421968F6F00BFEA85 /* GFGeoHash.m in Sources */,
 				049FC52E2184F2410039D762 /* ViewController.swift in Sources */,
@@ -451,6 +455,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7C5XTUX6GS;
 				INFOPLIST_FILE = RoadTrip/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -471,6 +476,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7C5XTUX6GS;
 				INFOPLIST_FILE = RoadTrip/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
