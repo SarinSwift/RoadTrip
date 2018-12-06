@@ -18,8 +18,10 @@ protocol HandleMapSearch {
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
     let locationManager = CLLocationManager()
+    var steps = [MKRoute.Step]()
 
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var addFriendButton: UIButton!
     
     var resultsSearchController: UISearchController? = nil
     // cahcing any incoming placemarks
@@ -42,6 +44,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
     }
     
+    @IBAction func addFriendButtonTapped(_ sender: UIButton) {
+        let modalViewController = FriendsViewController()
+        modalViewController.modalPresentationStyle = .overCurrentContext
+        present(modalViewController, animated: true, completion: nil)
+    }
     
     // Called everytime our user's location is updated
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -52,6 +59,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         let myLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
         let region: MKCoordinateRegion = MKCoordinateRegion(center: myLocation, span: span)
         mapView.setRegion(region, animated: true)
+        mapView.userTrackingMode = .followWithHeading
         
         // this shows the blue dot on the map
         self.mapView.showsUserLocation = true
@@ -75,6 +83,18 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 // boundingMapRect will fit the entire route into the screen
                 self.mapView.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
             }
+            
+            // ADDINGGGGGG
+            
+            // probably means getting the first route in the many routes they chose for us
+//            guard let primaryRoute = response.routes.first else { return }
+//            self.steps = primaryRoute.steps
+//            for i in 0..<primaryRoute.steps.count {
+//                let step = primaryRoute.steps[i]
+//                print(step.instructions)
+//                print(step.distance)
+//                let region = CLCircularRegion(center: step.polyline.coordinate, radius: 20, identifier: "\(i)")
+//            }
         }
     }
     
@@ -94,7 +114,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         request.source = MKMapItem(placemark: startingLocation)
         request.destination = MKMapItem(placemark: destination)
         request.transportType = .automobile
-        request.requestsAlternateRoutes = true
+        request.requestsAlternateRoutes = false
         
         return request
     }
@@ -158,6 +178,7 @@ extension ViewController: HandleMapSearch, MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         let renderer = MKPolylineRenderer(overlay: overlay as! MKPolyline)
         renderer.strokeColor = .blue
+        renderer.lineWidth = 3
         
         return renderer
     }
