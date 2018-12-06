@@ -45,9 +45,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func addFriendButtonTapped(_ sender: UIButton) {
-        let modalViewController = FriendsViewController()
-        modalViewController.modalPresentationStyle = .overCurrentContext
-        present(modalViewController, animated: true, completion: nil)
+        
     }
     
     // Called everytime our user's location is updated
