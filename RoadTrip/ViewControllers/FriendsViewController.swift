@@ -15,7 +15,7 @@ struct Names {
 
 class FriendsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    let names: [Names] = [Names(title: "Stacy"), Names(title: "Macy"), Names(title: "Rosy")]
+    var names = [Names]()
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -51,8 +51,20 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
         
         alert.addAction(UIAlertAction(title: "Add", style: .default, handler: { [weak alert] (_) in
             let textField = alert?.textFields![0]
+            let textField1 = alert?.textFields![1]
+            let textField2 = alert?.textFields![2]
             print("Text field: \(textField?.text as Optional)")
+            print("Text field: \(textField1?.text as Optional)")
+            print("Text field: \(textField2?.text as Optional)")
+            
+            // want to insert it to the array of names
+            self.names.append(Names(title: textField?.text ?? ""))
+            let indexPath = IndexPath(row: self.names.count - 1, section: 0)
+            self.tableView.beginUpdates()
+            self.tableView.insertRows(at: [indexPath], with: .automatic)
+            self.tableView.endUpdates()
         }))
+        
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { [weak alert] (_) in
             let textField = alert?.textFields![0]
             print("Text field: \(textField?.text as Optional)")

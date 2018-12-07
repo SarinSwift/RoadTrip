@@ -35,7 +35,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="o2r-Zk-Pdf">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="biE-7k-lCB">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5Oi-oR-ohf">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5Oi-oR-ohf">
                                 <rect key="frame" x="259" y="0.0" width="100" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.11764705882352941" green="0.44705882352941173" blue="0.47843137254901957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
