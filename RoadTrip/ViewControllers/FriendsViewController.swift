@@ -13,7 +13,7 @@ struct Names {
     var title: String
 }
 
-class FriendsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class FriendsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
     
     var names = [Names]()
     
@@ -39,17 +39,14 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
     // popup action to add name, latitude, and loingitude
     @IBAction func addButtonTapped(_ sender: UIBarButtonItem) {
         let alert = UIAlertController(title: "Add Location", message: "Input latitude and longitude", preferredStyle: .alert)
-        alert.addTextField { (textFieldName) in
-            textFieldName.placeholder = "Name"
-        }
-        alert.addTextField { (textFieldLat) in
-            textFieldLat.placeholder = "Latitude"
-        }
-        alert.addTextField { (textFieldLong) in
-            textFieldLong.placeholder = "Longitude"
-        }
         
-        alert.addAction(UIAlertAction(title: "Add", style: .default, handler: { [weak alert] (_) in
+        // adding name, latitude, longitude
+        alert.addTextField(configurationHandler: usrNameTextField)
+        alert.addTextField(configurationHandler: latitudeTextField)
+        alert.addTextField(configurationHandler: longitudeTextField)
+        
+        var addAction = UIAlertAction()
+        addAction = UIAlertAction(title: "Add", style: .default, handler: { [weak alert] (_) in
             let textField = alert?.textFields![0]
             let textField1 = alert?.textFields![1]
             let textField2 = alert?.textFields![2]
@@ -62,16 +59,41 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
             let indexPath = IndexPath(row: self.names.count - 1, section: 0)
             self.tableView.beginUpdates()
             self.tableView.insertRows(at: [indexPath], with: .automatic)
-            self.tableView.endUpdates()
-        }))
+            self.tableView.endUpdates() })
         
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { [weak alert] (_) in
+//        addAction.isEnabled = false
+        
+        // checks if there is text
+//        func textFieldName(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+//            let userEnteredString = textField.text
+//            let newString = (userEnteredString! as NSString).replacingCharacters(in: range, with: string) as NSString
+//            if newString != "" {
+//                addAction.isEnabled = false
+//            } else {
+//                addAction.isEnabled = true
+//            }
+//            return true
+//        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: { [weak alert] (_) in
             let textField = alert?.textFields![0]
-            print("Text field: \(textField?.text as Optional)")
-        }))
+            print("Text field: \(textField?.text as Optional)")})
+        alert.addAction(cancelAction)
+        alert.addAction(addAction)
         
         self.present(alert, animated: true, completion: nil)
     }
+    
+    func usrNameTextField(textField: UITextField!) {
+        textField.placeholder = "Name"
+    }
+    func latitudeTextField(textField: UITextField) {
+        textField.placeholder = "Latitude"
+    }
+    func longitudeTextField(textField: UITextField) {
+        textField.placeholder = "Longitude"
+    }
+    
     
     
     
@@ -90,6 +112,19 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Selected index: \(indexPath.row)")
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            names.remove(at: indexPath.row)
+            
+            self.tableView.beginUpdates()
+            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            self.tableView.endUpdates()
+        }
     }
     
 }
